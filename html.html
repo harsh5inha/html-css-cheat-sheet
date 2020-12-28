@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>HTML & CSS Cheat Sheet</title> <!-- This is the bit that shows on the tab of the browser-->
+			<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+
+	<body>
+		<a href="blog.html" target="_blank">Go to blog</a>
+
+		<h1>HTML</h1>
+		<h2>Hyper Text Markup Language</h2>
+
+		<p>
+
+		<strong>HTML is not a programming language.</strong> There are no conditional statements or loops etc. It's a language for making web pages and html documents. It is only presentational. Every website outputs HTML to the browser. It is used in conjunction with CSS, a <em> styling </em> language.
+<br/>
+<br/>
+		HTML tags are the basic building block of any web page.
+			<ul>
+				<li>Elements are surrounded by angle brackets for example: <#tagname>content<#/tagname> the tagname is the element - I'm using the # symbol in the tag or else the tag would be interpreted literally.</li>
+				<li>Tags usually have start and end tags, indicated by the forward slash</li>
+				<li>Some tags, like <#br/> close themselves (remnant of XHTML) </li>
+			</ul>
+
+			<ol>
+
+				<li> You can use the <#strong> and <#em> tags to bold and italicize respectively, but you can change that functionality using CSS if you want.</li>
+				<li> You can create links using an <#a href = ''> tag. The href part is called the attribute, and is the location where you want the link to open. It can be a local URL, like another page on your site, in which case you'd just write "about.html" as an example, or you could link to an external URL, in which case you'd write https:// etc. You can also specify that you want the page to open onto another tab, in which case you'd specify the target attribute as '_blank'. <a/ href = 'https://www.google.com' target = '_blank'> For example, this text is linked to the Google home page. </a> </li>
+				<li> All HTML tags can have attributes. Attributes provide information about an element. They are key:value pairs. href and target are two examples of attributes.</li>
+				<li> Lists: The <#ul> tag stands for unordered list, while the <#ol> tag stands for ordered list. </li>
+				<li> Tables: The tags for tables are shown below. Also, a table itself is shown further below.
+					<ul>
+						<li> <#table> </li>
+						<li> <#thead> </li>
+						<li> <#tbody> </li>
+						<li> <#tr> - Table Row </li>
+						<li> <#th> - Table Heading </li>
+						<li> <#td> - Table Data </li>
+					</ul>
+				</li>
+
+				<br/>
+				<hr/> <!-- This gives us a horizontal line -->
+				<br/>
+
+		<table>
+
+			<thead>
+
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Age</t h>
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>Harsh Sinha</td>
+					<td>hsinha@college.harvard.edu</td>
+					<td>22</td>
+				</tr>
+
+				<tr>
+					<td>Sachin Sinha</td>
+					<td>sinbadsachinsinha@gmail.com</td>
+					<td>24</td>
+				</tr>
+
+				<tr>
+					<td>Anshuman Sinha</td>
+					<td>anshumansinh@gmail.com</td>
+					<td>20</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+<br/>
+<br/>
+
+				<li> Forms: With forms you usually see the attribute "action = 'process.php' " which will submit the form to a particular page named process.php. You'll also see method = 'post', which means it'll make a post request to a server, which adds that data to a database. Pretty secure. Opposed to method = 'get', where you'll see the data filled in the URL, which is less secure. A form, with a variety of different input options is below: </li>
+
+				<br/>
+				<hr/> <!-- This gives us a horizontal line -->
+				<br/>
+
+				<form action="process.php" method = 'post'>
+					<div>
+						<label>First Name</label>
+						<input type="text" name="firstName", placeholder="Enter first name">
+					<div/>
+					<br/>
+					<div>
+						<label>Last Name</label>
+						<input type="text" name="lastName">
+					<div/>
+					<br/>
+					<div>
+						<label>Email</label>
+						<input type="email" name="email">
+					<div/>
+					<br/>
+					<div>
+						<label>Message</label>
+						<textarea name="message"></textarea> <!-- The name = 'message' bit is just what gets sent server side, after the user fills in the form -->
+					<div/>
+					<br>
+					<div>
+						<label>Gender</label>
+						<select name="gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+						</select>
+					</div>
+					<br>
+					<div>
+						<label>Age:</label>
+						<input type="number" name="age" value="30">
+					</div>
+					<br>
+					<div>
+						<label>Birthday:</label>
+						<input type="date" name="birthday">
+					</div>
+					<br>
+						<input type="submit" name="submit" value="Submit">
+			</form>
+<br/>
+<br/>
+
+				<li> The <#div> tag is nothing more than a container unit that encapsulates other page elements and divides the HTML document into sections. Web developers use <#div> elements to group together HTML elements and apply CSS styles to many elements at once. </li>
+				<li> <#meta> tags provide structured metadata about a Web page. They are part of a web page's head section. Multiple Meta elements with different attributes can be used on the same page. Meta elements can be used to specify page description, keywords and any other metadata not provided through the other head elements and attributes.</li>
+				<li> Important <#meta> tag attributes are the title attribute, which is what your website looks like when it shows up on a search engine results page. The keywords attribute, which is basically a bunch of keywords from your website, doensn't matter as much for SEO though. The description attribute, which is what shows in normal text below your title attribute in a search engine, and is usually a concise decription of your site. The language attribute, which specifies human language (English, Spanish, etc.). The robots attribute, which specifies whether search engines and crawlers are allowed to index or scrape a page. </li>
+
+			</ol>
+
+
+		<!-- Button -->
+		<button>Click Me</button> <!-- Need to use JavaScript to actually get this to do anything -->
+
+		<br>
+
+		<!-- Image -->
+		<a href="sample.jpg">
+			<img src="../images/sample.jpg" alt="My Sample Image" width="200">
+		</a>
+
+		<!-- Quotations -->
+		<blockquote cite="http://traversymedia.com">
+			This is a quote. YAYAYAYAyayayayyayayayayyayayayayayayayayyayayayayayayyayyayayayaya.
+		</blockquote>
+
+		<p>The <abbr title="World Wide Web">WWW</abbr> is awesome</p> <!-- If you hover over it, it shows you World Wide Web -->
+
+		<p><cite>HTML crash course</cite> by Harsh Sinha</p>
+
+				</p>
+
+
+		<h1>CSS</h1>
+		<h2>Cascading Style Sheets</h2>
+	<p>
+		Similar to HTML, this is not a programming language.
+<br/>
+<br/>
+Three methods of adding CSS to your webpage:
+		<ul>
+			<li> Inline: adding it directly in the html element</li>
+			<li> Internal: adding it using style tags within a single document</li>
+			<li> External: Linking an external .css file</li>
+		</ul>
+
+<ul>
+
+<li>So you have a{background-color: yellow;} The three elements are called "Selector", "Property", and "Value".</li>
+<li>In terms of attributes for elements, IDs should be condsidered uique. Like "main-nave bar", etc. But Classes shouldn't because you'd want to assign the css style to all elements of that class.</li>
+<li>Padding is the space insed; margin is the space outside.</li>
+
+</ul>
+		<h1>Separate Webpage</h1>
+
+<div class="container">
+		<div class="box-1">
+			<h1>Hello World</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<div class="box-2">
+			<h1>Goodbye World</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a class="button" href="">Read More</a>
+		</div>
+
+		<div class="categories">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="#">Category 1</a></li>
+				<li><a href="#">Category 2</a></li>
+				<li><a href="#">Category 3</a></li>
+				<li><a href="#">Category 4</a></li>
+				<li><a href="test.html">Category 5</a></li>
+			</ul>
+		</div>
+
+		<form class="my-form">
+			<div class="form-group">
+				<label>Name: </label>
+				<input type="text" name="name">
+			</div>
+			<div class="form-group">
+				<label>Email: </label>
+				<input type="text" name="email">
+			</div>
+			<div class="form-group">
+				<label>Message: </label>
+				<textarea name="message"></textarea>
+			</div>
+			<input class="button" type="submit" value="Submit" name="">
+		</form>
+
+		<div class="block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			</p>
+		</div>
+		<div class="block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			</p>
+		</div>
+		<div class="block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			</p>
+		</div>
+
+		<div class="clr"></div> <!-- This clears any floats above -->
+
+		<div id="main-block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			</p>
+		</div>
+
+		<div id="sidebar">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			</p>
+		</div>
+
+		<div class="clr"></div>
+
+		<div class="p-box">
+			<h1>Hello</h1>
+			<h2>Goodbye</h2>
+		</div>
+
+		<ul class="my-list">
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+		</ul>
+	</div><!-- ./container -->
+
+	<a class="fix-me button" href="">Hello</a>
+
+	<div style="margin-top:500px;"></div>
+
+	</body>
+
+</html>

@@ -1,0 +1,1 @@
+This is a very basic cheatsheet for HTML/CSS. It includes at least one element of all the most commonly used HTML tags, and most of the basic CSS styling. Nothing fancy here.
